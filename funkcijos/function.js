@@ -135,3 +135,68 @@ if (day == 1) {
 } else {
 	console.log("Tokia diena neegzistuoja!");
 }
+
+const parosMetas = "diena";
+const arLyja = false;
+const temp = 25;
+const kadaSilta = 
+
+if (parosMetas === "diena" && arLyja === true) {
+	console.log("Einam sokti lietuje");
+} else if (parosMetas === "diena" && arLyja === false) {
+	console.log("Eiline diena rojuje");
+} else if (parosMetas === "naktis" && arLyja === true) {
+	console.log("Sedim namie");
+}
+
+if (parosMetas === "diena") {
+	if (arLyja) {
+		console.log("Einam sokti lietuje");
+	} else {
+		console.log("Eiline diena rojuje");
+	}
+}
+
+const g = 5;
+const h = 7;
+
+if (g>h) {
+	console.log('Daugiau');
+} else {
+	console.log('Ne maziau');
+}
+
+if (g>=h) {
+	console.log('Daugiau ar lygu');
+} else {
+	console.log('Maziau');
+}
+
+_______________________
+
+const user = {
+	name:'Jonas',
+	age: 99,
+}
+
+user.name
+user['name']
+
+const abc = {
+	65: 'a'
+}
+
+abc[65]
+
+if (abc[65] === 'a') {
+	console.log('aaaaaa');
+}else {
+	console.log('bbbbb');
+}
+
+// ctrl+h(pakeicia viska ka norejai, cool shit)
+// Ctrl + D: Select the next occurrence of the current word.
+// Ctrl + U: Undo the last cursor operation.
+
+// Palyginimo operatoriai
+// <, >, <=, >=, ===, ==, !=, !==
