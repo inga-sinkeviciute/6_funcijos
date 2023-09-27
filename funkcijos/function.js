@@ -4,6 +4,28 @@ function tuscia() {
 	// logikos blokas
 }
 
+// Kodo sablonai
+// IF FUNKCIJOS
+// if (){}
+// if (){} else {}
+// if (){} else {}if (){}
+// if (){} else if(){}else {}
+
+// ctrl+h(pakeicia viska ka norejai, cool shit)
+// Ctrl + D: Select the next occurrence of the current word.
+// Ctrl + U: Undo the last cursor operation.
+
+// Palyginimo operatoriai
+// <, >, <=, >=, ===, ==, !=, !==
+
+// pasizureti kaip ten darosi su scriptais
+
+// palyginimo operatoriai:
+//  <,>, ==, ===, <=, >=, !=, !==
+
+// Loginiai operatoriai:
+//  &&, ||, !(priesingai reiksmei)
+
 const a = tuscia();
 console.log(a);
 
@@ -51,12 +73,6 @@ function studentAverage(name, marks) {
 
 console.log(studentAverage("Jonas", [10, 8, 7, 5, 7]));
 
-// Kodo sablonai
-// IF FUNKCIJOS
-// if (){}
-// if (){} else {}
-// if (){} else {}if (){}
-// if (){} else if(){}else {}
 
 console.clear();
 
@@ -194,9 +210,3 @@ if (abc[65] === 'a') {
 	console.log('bbbbb');
 }
 
-// ctrl+h(pakeicia viska ka norejai, cool shit)
-// Ctrl + D: Select the next occurrence of the current word.
-// Ctrl + U: Undo the last cursor operation.
-
-// Palyginimo operatoriai
-// <, >, <=, >=, ===, ==, !=, !==
