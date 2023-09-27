@@ -50,3 +50,88 @@ function studentAverage(name, marks) {
 }
 
 console.log(studentAverage("Jonas", [10, 8, 7, 5, 7]));
+
+// Kodo sablonai
+// IF FUNKCIJOS
+// if (){}
+// if (){} else {}
+// if (){} else {}if (){}
+// if (){} else if(){}else {}
+
+console.clear();
+
+if (4 > 2) {
+	console.log("4 yra daugiau uz 2");
+}
+
+if (true) {
+	console.log(true);
+}
+
+//realiai false yra, nes neteisingu reiksmiu nespausdina, ne kaip boolean veikia
+if (false) {
+	console.log(false);
+}
+
+const a1 = 7;
+const b1 = 5;
+
+if (a1 > b1) {
+	console.log("A1 yra daugiau uz B1");
+} else {
+	console.log("A1 nera daugiau uz B1");
+}
+
+// const day = 1;
+
+// if (day == 1) {
+// 	console.log("Pirmadienis");
+// }
+
+// if (day == 2) {
+// 	console.log("Antradienis");
+// }
+
+// if (day == 3) {
+// 	console.log("Treciadienis");
+// }
+
+// if (day == 4) {
+// 	console.log("Ketvirtadienis");
+// }
+
+// if (day == 5) {
+// 	console.log("Penktadienis");
+// }
+
+// if (day == 6) {
+// 	console.log("Sestadienis");
+// }
+
+// if (day == 7) {
+// 	console.log("Sekmadienis");
+// } else {
+// 	console.log("Tokia diena neegzistuoja!");
+// }
+
+const day = 3;
+
+// kodo nestinimas (reiktu tik pataisyti rasant else{if({})})
+
+if (day == 1) {
+	console.log("Pirmadienis");
+} else if (day === 2) {
+	console.log("Antradienis");
+} else if (day === 3) {
+	console.log("Treciadienis");
+} else if (day === 4) {
+	console.log("Ketvirtadienis");
+} else if (day === 5) {
+	console.log("Penktadienis");
+} else if (day === 6) {
+	console.log("Sestadienis");
+} else if (day === 7) {
+	console.log("Sekmadienis");
+} else {
+	console.log("Tokia diena neegzistuoja!");
+}
