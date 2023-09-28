@@ -93,3 +93,36 @@ for (let i = 0; i < amount; i++) {
 
 const average = totalSum / amount;
 console.log(marks, "average is", average);
+
+// things to know about for functions:
+// for loop consists of three parts: initialization, condition, and increment (or decrement)
+
+// Initialization:
+// The initialization part (let i = 0) runs only once at the beginning and is used to set up the loop variable.
+// Condition:
+// The condition part (i < 5) is evaluated before each iteration. If it evaluates to true, the loop continues; otherwise, it terminates.
+// Increment (or Decrement):
+// The increment part (i++) is executed at the end of each iteration and is used to update the loop variable. You can also use i-- for decrementing.
+
+// Loop Control:
+
+// To exit a for loop prematurely, you can use the break statement.
+const numbers = [2, 4, 7, 1, 9, 3];
+
+for (let i = 0; i < numbers.length; i++) {
+	if (numbers[i] > 5) {
+		console.log(`Found a number greater than 5: ${numbers[i]}`);
+		break; // Exit the loop
+	}
+}
+
+// To skip the current iteration and continue with the next one, you can use the continue statement.
+
+const numbers1 = [2, 4, 7, 1, 9, 6];
+
+for (let i = 0; i < numbers1.length; i++) {
+	if (numbers1[i] % 2 !== 0) {
+		continue; // Skip the current iteration for odd numbers
+	}
+	console.log(`Even number: ${numbers1[i]}`);
+}
