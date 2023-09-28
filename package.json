@@ -1,12 +1,14 @@
 {
-  "name": "6_funcijos",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Inga Sinkeviciute",
-  "license": "ISC"
+	"name": "6_funcijos",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"for": "nodemon ./funkcijos/for.js",
+		"if": "nodemon ./funkcijos/if.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Inga Sinkeviciute",
+	"license": "ISC"
 }
