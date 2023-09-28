@@ -126,3 +126,25 @@ for (let i = 0; i < numbers1.length; i++) {
 	}
 	console.log(`Even number: ${numbers1[i]}`);
 }
+
+console.clear();
+
+// Praktikavimosi uzdavinukai:
+
+// Write a program that uses a for loop to print numbers from 1 to N, where N is a variable you can set.
+
+const n = 10;
+for (let i = 0; i < n; i++) {
+	console.log(i);
+}
+
+// Use a for loop to calculate the sum of numbers from 1 to N.
+
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0;
+
+for (let i = 0; i < numbers2.length; i++) {
+	const amount = numbers2[i];
+	sum += amount;
+	console.log(`Total sum of all numbers: ${sum}`);
+}
