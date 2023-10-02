@@ -328,5 +328,3 @@ console.log(nextBigger(12)); // Output: 21
 console.log(nextBigger(513)); // Output: 531
 console.log(nextBigger(2017)); // Output: 2071
 console.log(nextBigger(9)); // Output: -1
-console.log(nextBigger(111)); // Output: -1
-console.log(nextBigger(531)); // Output: -1
