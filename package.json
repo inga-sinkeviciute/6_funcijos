@@ -8,6 +8,7 @@
 		"uzd:tarpai": "nodemon ./uzd/tarpai.js",
 		"method:number": "nodemon ./method/number.js",
 		"method:string": "nodemon ./method/string.js",
+		"method:array": "nodemon ./method/array.js",
 		"for": "nodemon ./funkcijos/for.js",
 		"if": "nodemon ./funkcijos/if.js",
 		"train": "nodemon ./katos/train.js",
