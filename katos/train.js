@@ -328,3 +328,47 @@ console.log(nextBigger(12)); // Output: 21
 console.log(nextBigger(513)); // Output: 531
 console.log(nextBigger(2017)); // Output: 2071
 console.log(nextBigger(9)); // Output: -1
+
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
+
+function differenceInAges(ages) {
+	if (ages.length === 0) {
+		return [0, 0, 0];
+	}
+	let minAge = Infinity;
+	let maxAge = -Infinity;
+	for (let i = 0; i < ages.length; i++) {
+		const age = ages[i];
+		if (age < minAge) {
+			minAge = age;
+		}
+		if (age > maxAge) {
+			maxAge = age;
+		}
+	}
+
+	const ageDifference = maxAge - minAge;
+
+	return [minAge, maxAge, ageDifference];
+}
+
+// An AI has infected a text with a character!!
+// This text is now fully mutated to this character.
+// If the text or the character are empty, return an empty string.
+// There will never be a case when both are empty as nothing is going on!!
+// Note: The character is a string of length 1 or an empty string.
+
+function contamination(text, char) {
+	if (text === "" || char === "") {
+		return "";
+	}
+
+	return char.repeat(text.length);
+}
+
+// Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+function multipleOfIndex(array) {
+	return array.filter((x, i) => x == 0 || x % i === 0);
+}
