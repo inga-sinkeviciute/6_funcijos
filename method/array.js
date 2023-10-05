@@ -56,6 +56,8 @@ console.log(students.indexOf("Chuck"));
 
 console.clear();
 
+// typeOf
+
 console.log(typeof 5);
 console.log(typeof "asd");
 console.log(typeof true);
@@ -63,6 +65,8 @@ console.log(typeof undefined);
 console.log(typeof null);
 console.log(typeof {});
 console.log(typeof []);
+
+// isArray
 
 console.log(Array.isArray(5));
 console.log(Array.isArray("asd"));
@@ -78,6 +82,8 @@ console.log(Array.isArray(["a", "b", 5151, true, "c"]));
 
 console.clear();
 
+// Join
+
 const abc = ["a", "b", "c", "d", "e", "f"];
 const abcJoin = abc.join();
 const abcJoin2 = abc.join("-");
@@ -88,3 +94,55 @@ console.log(abcJoin, typeof abcJoin);
 console.log(abcJoin2);
 console.log(abcJoin3);
 console.log(abcJoinHip);
+
+// Push -> [ 'rose', 'tulip', 'rose', 'kardelis' ]
+
+const flowers = [];
+console.log(flowers);
+
+flowers.push("rose");
+console.log(flowers);
+
+flowers.push("tulip");
+console.log(flowers);
+
+flowers.push("rose");
+console.log(flowers);
+
+flowers.push("kardelis");
+console.log(flowers);
+
+// Pop -> [ 'rose', 'tulip', 'rose' ]
+
+flowers.pop();
+console.log(flowers);
+
+// Shift  -> [ 'tulip', 'rose' ]
+
+flowers.shift();
+console.log(flowers);
+
+// Unshift -> [ 'ruta', 'tulip', 'rose' ]
+flowers.unshift("ruta");
+console.log(flowers);
+console.clear();
+
+// reverse -> [ 'rose', 'tulip', 'ruta' ]. Reversas ta pati masyva apsuka, o ne kuria nauja apsukta.
+console.log(flowers);
+console.log(flowers.reverse());
+console.log(flowers);
+console.log(flowers.reverse());
+console.clear();
+
+// slice -> [ 5, 6 ]. Kode? Nes startas yra imtinai, o pabaiga ne imtinai. Del to, kai eina salia esantys skaiciai- viena grazina
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+const numbers46 = numbers.slice(4, 6);
+console.log(numbers46);
+
+// splice -> antras skaicius sako ka istrinti [1, 2, 3, 5, 6, 7, 8, 9, 0]
+
+console.log(numbers);
+numbers.splice(3, 1);
+console.log(numbers);
+
+console.clear();
