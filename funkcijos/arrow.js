@@ -70,3 +70,23 @@ const firstLetter = (str) => {
 	return str[0];
 };
 console.clear();
+
+const errors = {
+	notString: "Error: first param - a string type.",
+	empty: "Error: first param - non emplty string value",
+};
+
+const firstLetter5 = (str) => {
+	const msg =
+		typeof str !== "string"
+			? "Error: has to be a string"
+			: str.length
+			? str[0]
+			: errors.empty;
+
+	return msg;
+};
+
+console.log(firstLetter5(5));
+console.log(firstLetter5(""));
+console.log(firstLetter5("Labas"));
