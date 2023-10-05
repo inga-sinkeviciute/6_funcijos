@@ -12,6 +12,7 @@
 		"for": "nodemon ./funkcijos/for.js",
 		"if": "nodemon ./funkcijos/if.js",
 		"arrow": "nodemon ./funkcijos/arrow.js",
+		"ternary": "nodemon ./funkcijos/ternary.js",
 		"train": "nodemon ./katos/train.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

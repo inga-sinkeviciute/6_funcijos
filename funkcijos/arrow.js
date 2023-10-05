@@ -52,3 +52,21 @@ const kvadratu = (a) => a ** 2;
 
 console.log(`${n1} ** 2 = ${kvadratu(n1)}`);
 console.log(`${n2} ** 2 = ${kvadratu(n2)}`);
+
+// funkcija gauna zodi, bet grazina tik pirma raide. Cia biski freestylin.. waka waka
+
+const pirmaRaide = (word) => word[0];
+
+console.log(pirmaRaide(5));
+console.log(pirmaRaide(""));
+
+const firstLetter = (str) => {
+	if (typeof str !== "string") {
+		return "Error";
+	}
+	if (str.length === 0) {
+		return "Error";
+	}
+	return str[0];
+};
+console.clear();
