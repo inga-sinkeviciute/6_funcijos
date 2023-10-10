@@ -372,3 +372,71 @@ function contamination(text, char) {
 function multipleOfIndex(array) {
 	return array.filter((x, i) => x == 0 || x % i === 0);
 }
+
+// For this game of BINGO, you will receive a single array of 10 numbers from 1 to 26 as an input. Duplicate numbers within the array are possible.
+// Each number corresponds to their alphabetical order letter (e.g. 1 = A. 2 = B, etc). Write a function where you will win the game if your numbers can spell "BINGO". They do not need to be in the right order in the input array. Otherwise you will lose. Your outputs should be "WIN" or "LOSE" respectively.
+
+function bingo(a) {
+	const numbers = new Set(a);
+	if (
+		numbers.has(2) &&
+		numbers.has(9) &&
+		numbers.has(14) &&
+		numbers.has(7) &&
+		numbers.has(15)
+	) {
+		return "WIN";
+	} else {
+		return "LOSE";
+	}
+}
+// After you've solved @priyankaherur's problem ( http://www.codewars.com/kata/this-is-a-problem/javascript ) you may try to solve this other one.
+// The problem:
+// Having created a function NamedOne which takes first & last names as parameters and returns an object with firstName, lastName and fullName ( = firstName + a space + lastName ) properties which should be all accessibles, we discovered that "accessible" also means "mutable".
+// If, for example, we've got a "NamedOne" like this :
+// var namedOne = new NamedOne("Naomi","Wang")
+// namedOne.firstName // -> "Naomi"
+// namedOne.lastName  // -> "Wang"
+// namedOne.fullName  // -> "Naomi Wang"
+// ...properties may be changed :
+// namedOne.firstName = "John"
+// namedOne.firstName // -> "John"
+// namedOne.lastName = "Doe"
+// namedOne.lastName  // -> "Doe"
+// ...but all properties are not updated !
+// namedOne.fullName  // -> "Naomi Wang"
+// Your mission:
+// So the purpose of this kata is to create an object with accessible and "updatable" (can i say that?) properties.
+// If .firstName or .lastName are changed, then .fullName should also be changed
+// If .fullName is changed, then .firstName and .lastName should also be changed.
+// Note : "input format" to .fullName will be firstName + space+ lastName. If given fullName isn't valid then no property is changed.
+// Examples:
+// var namedOne = new NamedOne("Naomi","Wang")
+// namedOne.firstName = "John"
+// namedOne.lastName = "Doe"
+// namedOne.fullName // -> "John Doe"
+// namedOne.fullName = "Bill Smith"
+// namedOne.firstName // -> "Bill"
+// namedOne.lastName  // -> "Smith"
+// namedOne.fullName = "Tom" // -> no : lastName missing
+// namedOne.fullName = "TomDonnovan" // -> no : no space between first & last names
+// namedOne.fullName // -> "Bill Smith" (unchanged)
+// Can you change our function to create such a NamedOne object ?
+
+function namedOne(first, last) {
+	this.firstName = first;
+	this.lastName = last;
+
+	Object.defineProperty(this, "fullName", {
+		get: function () {
+			return this.firstName + " " + this.lastName;
+		},
+		set: function (newFullName) {
+			const names = newFullName.split(" ");
+			if (names.length === 2) {
+				this.firstName = names[0];
+				this.lastName = names[1];
+			}
+		},
+	});
+}
