@@ -10,6 +10,8 @@
 		"method:number": "nodemon ./method/number.js",
 		"method:string": "nodemon ./method/string.js",
 		"method:array": "nodemon ./method/array.js",
+		"funkcijos:class": "nodemon ./funkcijos/class.js",
+		"class-extend": "nodemon ./funkcijos/class-extend.js",
 		"for": "nodemon ./funkcijos/for.js",
 		"if": "nodemon ./funkcijos/if.js",
 		"arrow": "nodemon ./funkcijos/arrow.js",
