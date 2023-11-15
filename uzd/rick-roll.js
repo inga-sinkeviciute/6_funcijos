@@ -78,3 +78,105 @@ Never gonna tell a lie and hurt you`;
 // Papildomai: perrašyti, jog tai būtų SongAnalizer klasė
 // Turėtų parametrą: pridėti "case sensitivity" parametrą, kuris pagal nutylėjimą yra "false"
 // Turėtų parametrą: kuris pakeičia žodžių skaičiavimo tvarką ir trumpiniai traktuojami kaip pilni žodžiai, pvz.: don't = do not;
+
+class SongAnalyzer {
+	constructor(text, caseSensitive = false) {
+		this.text = text;
+		this.caseSensitive = caseSensitive;
+	}
+
+	countNonEmptyLines() {
+		const nonEmptyLines = this.text
+			.split("\n")
+			.filter((line) => line.trim() !== "");
+		return nonEmptyLines.length;
+	}
+
+	countWords() {
+		const words = this.caseSensitive
+			? this.text.match(/\b\w+\b/g)
+			: this.text.match(/\b\w+\b/gi);
+		return words ? words.length : 0;
+	}
+
+	findLongestLine() {
+		const lines = this.text.split("\n");
+		const longestLine = lines.reduce(
+			(longest, current) =>
+				current.length > longest.length ? current : longest,
+			""
+		);
+		return longestLine;
+	}
+
+	findLongestLineLength() {
+		const longestLine = this.findLongestLine();
+		return longestLine.length;
+	}
+
+	findMostCommonLetter() {
+		const letters = this.text.replace(/[^a-zA-Z]/g, "").split("");
+		const letterCount = {};
+
+		letters.forEach((letter) => {
+			const key = this.caseSensitive ? letter : letter.toLowerCase();
+			letterCount[key] = (letterCount[key] || 0) + 1;
+		});
+
+		const mostCommonLetter = Object.keys(letterCount).reduce((a, b) =>
+			letterCount[a] > letterCount[b] ? a : b
+		);
+		return mostCommonLetter;
+	}
+
+	findMostCommonWord() {
+		const words = this.caseSensitive
+			? this.text.match(/\b\w+\b/g)
+			: this.text.match(/\b\w+\b/gi);
+		const wordCount = {};
+
+		words.forEach((word) => {
+			const key = this.caseSensitive ? word : word.toLowerCase();
+			wordCount[key] = (wordCount[key] || 0) + 1;
+		});
+
+		const mostCommonWord = Object.keys(wordCount).reduce((a, b) =>
+			wordCount[a] > wordCount[b] ? a : b
+		);
+		return mostCommonWord;
+	}
+
+	countUniqueLetters() {
+		const uniqueLetters = [
+			...new Set(this.text.replace(/[^a-zA-Z]/g, "").split("")),
+		];
+		return uniqueLetters.length;
+	}
+
+	countUniqueWords() {
+		const words = this.caseSensitive
+			? this.text.match(/\b\w+\b/g)
+			: this.text.match(/\b\w+\b/gi);
+		const uniqueWords = [...new Set(words)];
+		return uniqueWords.length;
+	}
+
+	countWordsWithApostrophe() {
+		const wordsWithApostrophe = this.caseSensitive
+			? this.text.match(/\b\w+'\w+\b/g)
+			: this.text.match(/\b\w+'\w+\b/gi);
+		return wordsWithApostrophe ? wordsWithApostrophe.length : 0;
+	}
+}
+
+// Example usage:
+const songAnalyzer = new SongAnalyzer(text);
+console.log(songAnalyzer.countNonEmptyLines());
+console.log(songAnalyzer.countWords());
+console.log(songAnalyzer.findLongestLine());
+console.log(songAnalyzer.findLongestLineLength());
+console.log(songAnalyzer.findMostCommonLetter());
+console.log(songAnalyzer.findMostCommonWord());
+console.log(songAnalyzer.countUniqueLetters());
+console.log(songAnalyzer.countUniqueWords());
+console.log(songAnalyzer.countWordsWithApostrophe());
