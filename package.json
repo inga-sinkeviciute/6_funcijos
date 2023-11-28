@@ -11,6 +11,7 @@
 		"method:number": "nodemon ./method/number.js",
 		"method:map": "nodemon ./method/map.js",
 		"method:string": "nodemon ./method/string.js",
+		"method:spread": "nodemon ./method/spread.js",
 		"method:array": "nodemon ./method/array.js",
 		"array-loops": "nodemon ./method/array-loops.js",
 		"object-loops": "nodemon ./method/object-loops.js",
